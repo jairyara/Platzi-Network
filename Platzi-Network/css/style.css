@@ -64,6 +64,18 @@ p.text {
     z-index: 2;
 }
 
+.burguer div {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 0 5px 5px 5px;
+    transition: transform 0.4s ease-out;
+}
+
+.burguer {
+    display: none;
+}
+
 .header-container {
     display: flex;
     align-items: center;
@@ -339,7 +351,7 @@ textarea {
     height: 5vh;
     width: 15vw;
     background: var(--primary-colorAccent);
-    border-radius: 3px;
+    border-radius: 300px;
     color: var(--white-color);
     border: 0;
     margin: 0 auto;
@@ -400,7 +412,16 @@ textarea {
 
 /* Ipad */
 
-@media screen and (max-width: 767px) {}
+@media screen and (max-width: 767px) {
+    .nav-links {
+        display: none;
+        transform: translateX(-100vw);
+        transition: transform 0.5s ease-in-out;
+    }
+    .burguer {
+        display: block;
+    }
+}
 
 
 /* End Ipad */
@@ -420,3 +441,27 @@ textarea {
 
 
 /* End Mobile S */
+
+
+/* Animation styles */
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+    transition: transform 0.5s ease-in;
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+    transition: transform 0.5s ease-in;
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+
+/* End animation styles */
