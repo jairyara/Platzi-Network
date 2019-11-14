@@ -476,13 +476,17 @@ textarea {
 /* Mobile L */
 
 @media screen and (max-width: 479px) {
+    .portfolio {
+        margin: 0 auto;
+    }
     .portfolio-section,
     .courses-section {
         padding: 2vh;
         display: grid;
-        grid-template-columns: repeat(1, 50vw);
+        grid-template-columns: repeat(1, 70vw);
         grid-gap: 5px;
         justify-content: center;
+        margin: 0 auto;
     }
     .card-portfolio,
     .card-courses {
@@ -491,7 +495,7 @@ textarea {
     }
     .img-portfolio img,
     .img-courses img {
-        width: 45vw;
+        width: 60vw;
     }
     .profile-container {
         display: grid;
