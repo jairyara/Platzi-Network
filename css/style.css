@@ -505,8 +505,8 @@ textarea {
     }
     .btn-project,
     .btn-courses {
-        height: 5vh;
-        width: 25vw;
+        height: 6vh;
+        width: 36vw;
     }
     .btn-pills {
         width: 25vw;
@@ -551,11 +551,6 @@ textarea {
         grid-template-columns: repeat(autofill, 70vw);
         grid-gap: 5px;
         justify-content: center;
-    }
-    .btn-project,
-    .btn-courses {
-        height: 5vh;
-        width: 30vw;
     }
     .btn-pills {
         width: 25vw;
