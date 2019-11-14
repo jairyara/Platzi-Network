@@ -133,9 +133,9 @@ nav li {
 }
 
 .stats-profile {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(3, 15vw);
+    grid-gap: 5px;
 }
 
 .projects,
@@ -380,7 +380,7 @@ textarea {
 
 @media screen and (max-width: 1024px) {
     .header-container {
-        height: 12vh;
+        height: 8vh;
     }
     .profile-container,
     .portfolio-container {
@@ -413,13 +413,59 @@ textarea {
 /* Ipad */
 
 @media screen and (max-width: 767px) {
+    .menu {
+        position: fixed;
+        background: rgba(23, 34, 59, .8);
+        width: 100vw;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     .nav-links {
-        display: none;
         transform: translateX(-100vw);
         transition: transform 0.5s ease-in-out;
     }
+    .header ul {
+        display: initial;
+    }
+    .header ul li {
+        height: 30vh;
+        font-size: 1.5em;
+        text-decoration-line: underline;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .header ul li a {
+        justify-content: center;
+    }
     .burguer {
         display: block;
+    }
+    .portfolio-section,
+    .courses-section {
+        padding: 2vh;
+        display: grid;
+        grid-template-columns: repeat(2, 30vw);
+        grid-gap: 5px;
+        justify-content: center;
+    }
+    .card-portfolio,
+    .card-courses {
+        width: 25vw;
+        margin: 0 auto 5vh;
+    }
+    .img-portfolio img,
+    .img-courses img {
+        width: 25vw;
+    }
+    .stats-profile {
+        display: grid;
+        grid-template-columns: repeat(3, 20vw);
+        grid-gap: 5px;
     }
 }
 
@@ -429,7 +475,47 @@ textarea {
 
 /* Mobile L */
 
-@media screen and (max-width: 480px) {}
+@media screen and (max-width: 479px) {
+    .portfolio-section,
+    .courses-section {
+        padding: 2vh;
+        display: grid;
+        grid-template-columns: repeat(1, 50vw);
+        grid-gap: 5px;
+        justify-content: center;
+    }
+    .card-portfolio,
+    .card-courses {
+        width: 45vw;
+        margin: 0 auto 5vh;
+    }
+    .img-portfolio img,
+    .img-courses img {
+        width: 45vw;
+    }
+    .profile-container {
+        display: grid;
+        grid-template-columns: repeat(autofill, 50vw);
+        grid-gap: 5px;
+        justify-content: center;
+    }
+    .btn-project,
+    .btn-courses {
+        height: 5vh;
+        width: 21vw;
+    }
+    .btn-pills {
+        width: 25vw;
+    }
+    .stats-profile {
+        display: grid;
+        grid-template-columns: repeat(3, 30vw);
+        grid-gap: 5px;
+    }
+    .footer-nav {
+        display: none;
+    }
+}
 
 
 /* End Mobile L */
@@ -437,7 +523,44 @@ textarea {
 
 /* Mobile S */
 
-@media screen and (max-width: 320px) {}
+@media screen and (max-width: 320px) {
+    .portfolio-section,
+    .courses-section {
+        padding: 2vh;
+        display: grid;
+        grid-template-columns: repeat(1, 70vw);
+        grid-gap: 5px;
+        margin: 0 auto;
+        justify-content: center;
+    }
+    .card-portfolio,
+    .card-courses {
+        width: 70vw;
+        margin: 0 auto 5vh;
+    }
+    .img-portfolio img,
+    .img-courses img {
+        width: 70vw;
+    }
+    .profile-container {
+        display: grid;
+        grid-template-columns: repeat(autofill, 70vw);
+        grid-gap: 5px;
+        justify-content: center;
+    }
+    .btn-project,
+    .btn-courses {
+        height: 5vh;
+        width: 27vw;
+    }
+    .btn-pills {
+        width: 25vw;
+    }
+    .stats-profile .text {
+        font-size: 0.75em;
+        text-align: center;
+    }
+}
 
 
 /* End Mobile S */
